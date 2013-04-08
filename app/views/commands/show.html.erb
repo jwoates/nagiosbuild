@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Command description:</b>
+  <%= @command.command_description %>
+</p>
+
+<p>
+  <b>Command check:</b>
+  <%= @command.command_check %>
+</p>
+
+
+<%= link_to 'Edit', edit_command_path(@command) %> |
+<%= link_to 'Back', commands_path %>

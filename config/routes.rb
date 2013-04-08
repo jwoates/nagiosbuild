@@ -1,4 +1,8 @@
 Nagiosbuild::Application.routes.draw do
+  resources :commands
+
+  resources :services
+
   resources :servers
 
   resources :hostgroups

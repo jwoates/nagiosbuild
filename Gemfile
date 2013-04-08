@@ -41,6 +41,7 @@ gem "thin", :group => :development
 
 group :development, :test do
   gem "rspec-rails"
+  gem "shoulda", "~> 3.4.0"
   gem "factory_girl_rails"
   gem "capybara"
   gem "faker"

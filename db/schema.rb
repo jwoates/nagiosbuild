@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408181120) do
+ActiveRecord::Schema.define(:version => 20130408203355) do
+
+  create_table "commands", :force => true do |t|
+    t.string   "command_description"
+    t.string   "command_check"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
   create_table "hostgroups", :force => true do |t|
     t.string   "host_name"
@@ -28,6 +35,15 @@ ActiveRecord::Schema.define(:version => 20130408181120) do
     t.integer  "hostgroup_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "services", :force => true do |t|
+    t.string   "service_use"
+    t.string   "service_definition"
+    t.integer  "hostgroup_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "command_id"
   end
 
 end
