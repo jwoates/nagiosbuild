@@ -1,0 +1,25 @@
+<%= form_for(@hostgroup) do |f| %>
+  <% if @hostgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hostgroup.errors.count, "error") %> prohibited this hostgroup from being saved:</h2>
+
+      <ul>
+      <% @hostgroup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :host_name %><br />
+    <%= f.text_field :host_name %>
+  </div>
+  <div class="field">
+    <%= f.label :host_alias %><br />
+    <%= f.text_field :host_alias %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

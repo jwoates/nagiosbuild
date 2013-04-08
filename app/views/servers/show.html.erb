@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Server use:</b>
+  <%= @server.server_use %>
+</p>
+
+<p>
+  <b>Server name:</b>
+  <%= @server.server_name %>
+</p>
+
+<p>
+  <b>Server alias:</b>
+  <%= @server.server_alias %>
+</p>
+
+<p>
+  <b>Server address:</b>
+  <%= @server.server_address %>
+</p>
+
+<p>
+  <b>Hostgroup:</b>
+  <%= @server.hostgroup_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_server_path(@server) %> |
+<%= link_to 'Back', servers_path %>
