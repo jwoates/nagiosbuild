@@ -5,10 +5,10 @@ class Hostgroup < ActiveRecord::Base
             :format => { :with => /\A[a-z0-9\-\_.]+\z/, :message => 'Only lowercase letters, ".", "\-", and "\_" allowed' }
 
   validates :host_alias, :uniqueness => true
-  validates :host_name, :uniqueness => true
 
   has_many :servers
   has_many :services
+  has_many :commands, :through => :services
 
   validates_associated :servers, :services
 
